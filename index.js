@@ -12,7 +12,7 @@ import { verifyToken } from "./middleware/authMiddleware.js";
   app.use(express.json());
 
 app.use("/api/auth", authRoutes);
-console.log("MONGO_URI:", process.env.MONGO_URI);
+console.log("MONGO_URL:", process.env.MONGO_URL);
   // ✅ MongoDB
   mongoose
     .connect(process.env.MONGO_URL)
